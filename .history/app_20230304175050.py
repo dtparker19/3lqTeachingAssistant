@@ -1,6 +1,3 @@
-#import exception packages
-
-
 import streamlit as st
 from streamlit_chat import message
 from PIL import Image
@@ -29,11 +26,11 @@ def ask(question):
     return answer
 
 #set the page title
-st.set_page_config(page_title="3LQ Learning Bot", layout="centered")
+st.set_page_config(page_title="3LQ  Bot", layout="centered")
 # set the image caption
 #st.image(Image, caption='Teaching Assitant Bot', use_column_width=True)
 # page header
-st.title(f"3LQ Learning Bot")
+st.title(f"Teaching Assitant Bot")
 # store interaction history
 #
 if 'generated' not in st.session_state:
@@ -51,15 +48,10 @@ def get_text():
 user_input = get_text()
 #
 if user_input:
-    # write try catch block 
-    try:
-        response = ask(user_input)
-        # store the output 
-        st.session_state.past.append(user_input)
-        st.session_state.generated.append(response)
-    except Exception as e:
-        st.session_state.generated.append("I am sorry, I did not understand your input")
-    
+    response = ask(user_input)
+    # store the output 
+    st.session_state.past.append(user_input)
+    st.session_state.generated.append(response)
 #
 if st.session_state['generated']:   
     for i in range(len(st.session_state['generated'])-1, -1, -1):

@@ -1,6 +1,4 @@
-#import exception packages
-
-
+from sys import Exception
 import streamlit as st
 from streamlit_chat import message
 from PIL import Image

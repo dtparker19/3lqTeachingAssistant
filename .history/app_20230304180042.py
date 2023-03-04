@@ -1,6 +1,4 @@
-#import exception packages
-
-
+from sys import exception
 import streamlit as st
 from streamlit_chat import message
 from PIL import Image
@@ -58,8 +56,8 @@ if user_input:
         st.session_state.past.append(user_input)
         st.session_state.generated.append(response)
     except Exception as e:
-        st.session_state.generated.append("I am sorry, I did not understand your input")
-    
+        st.session_state.generated.append(response)
+        
 #
 if st.session_state['generated']:   
     for i in range(len(st.session_state['generated'])-1, -1, -1):
