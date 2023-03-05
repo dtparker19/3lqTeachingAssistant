@@ -8,7 +8,6 @@ import os
 import openai 
 import json
 
-API_KEY = st.secrets['openai_api_key']
 
 
 def ask(question):

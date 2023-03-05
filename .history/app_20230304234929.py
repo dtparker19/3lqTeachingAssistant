@@ -8,7 +8,6 @@ import os
 import openai 
 import json
 
-API_KEY = st.secrets['openai_api_key']
 
 
 def ask(question):
@@ -56,6 +55,7 @@ if user_input:
         st.session_state.generated.append(response)
     except Exception as e:
         print(e)
+
         st.session_state.generated.append("I am sorry, I did not understand your input")
     
 #

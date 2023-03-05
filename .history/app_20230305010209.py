@@ -8,8 +8,7 @@ import os
 import openai 
 import json
 
-API_KEY = st.secrets['openai_api_key']
-
+API_KEY = "9q3vfhm7l33rus21toc8fndupq7
 
 def ask(question):
     response = openai.Completion.create(
