@@ -12,8 +12,7 @@ import json
 with open("openai_api_key.json") as f:
     api_key = json.load(f)
 #
-openai.api_key = st.secrets['API_KEY']
-
+openai.api_key = st.secrets['API']
 
 def ask(question):
     response = openai.Completion.create(
