@@ -57,8 +57,7 @@ if user_input:
     except Exception as e:
         print(e)
         st.session_state.generated.append("I am sorry, I did not understand your input")
-        st.session_state.generated.append(e)
-        
+        st.session_state.generated.append(e
 if st.session_state['generated']:   
     for i in range(len(st.session_state['generated'])-1, -1, -1):
         message(st.session_state["generated"][i], key=str(i))
