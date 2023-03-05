@@ -28,7 +28,7 @@ def ask(question):
 #set the page title
 st.set_page_config(page_title="3LQ Learning Bot", layout="centered")
 # set the image caption
-#st.image(Image, caption='Teaching Assistant Bot', use_column_width=True)
+#st.image(Image, caption='Teaching Assitant Bot', use_column_width=True)
 # page header
 st.title(f"3LQ Learning Bot")
 # store interaction history
